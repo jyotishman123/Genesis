@@ -5,8 +5,13 @@ import Image from "next/image";
 
 // eslint-disable-next-line @next/next/no-async-client-component
 
+ 
 
-async function name() {
+
+
+
+export default async function Home() {
+  
   const endpoint = 'https://gql.hashnode.com';
   const apiKey = '2b8ef261-8746-4849-bce4-b1f06b53477a';
 
@@ -17,31 +22,36 @@ async function name() {
   })
 
   const query = gql`
-  query Me {
-    me {
+  query GetUserDetails($username: String!) {
+    user(username: jyotishman421) {
       id
       username
       name
-      profilePicture
+      bio {
+        # Include fields from the ContentFragment or other relevant fields
+        content
+        joinedAt
+        location
+        socialMedia {
+          twitter
+          github
+          linkedin
+        }
+        # Add more fields as needed
+      }
     }
   }
 `
-const data = await graphQLClient.request<Data>(query)
- return data
-}
+const data = await graphQLClient.request(query)
+ 
+console.log(data)
+const userdata = data
 
-
-
-
-export default async function Home() {
-  
-
-  const userdata = await name()
-  console.log(userdata)
+ 
   return (
     <main>
-      <h1>{userdata.me.name}</h1>
-        <img src={userdata.me.profilePicture} alt="user" />
+      <h1>{userdata?.me?.name}</h1>
+        <img src={userdata?.me?.profilePicture} alt="user" />
     </main>
   );
 }
