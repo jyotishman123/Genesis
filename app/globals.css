@@ -16,4 +16,22 @@
   }
 }
 
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+}
+
+.class {
+  font-family: var(--font-poppins);
+}
  
