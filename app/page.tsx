@@ -1,57 +1,135 @@
+import { gql, GraphQLClient } from "graphql-request";
 
+interface SocialMediaLinks {
+  website?: string;
+  github?: string;
+  twitter?: string;
+  instagram?: string;
+  facebook?: string;
+  stackoverflow?: string;
+  linkedin?: string;
+  youtube?: string;
+}
 
-import { gql, request, GraphQLClient } from "graphql-request";
-import Image from "next/image";
+interface Badge {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  dateAssigned: string;
+  infoURL: string;
+  suppressed: boolean;
+}
 
-// eslint-disable-next-line @next/next/no-async-client-component
+interface Author {
+  id: string;
+  username: string;
+  name: string;
+  bio: {
+    markdown: string;
+    html: string;
+    text: string;
+  };
+  profilePicture: string;
+  socialMediaLinks: SocialMediaLinks;
+  badges: Badge[];
+}
 
- 
+interface UserData {
+  followersCount: ReactNode;
+  me: {
+    followingsCount: ReactNode;
+    followersCount: ReactNode;
+    badges: any;
+    socialMediaLinks: any;
+    profilePicture: string | undefined;
+    bio: any;
+    id: string;
+    username: string;
+    name: string;
+  };
+}
 
-
-
-
-export default async function Home() {
-  
-  const endpoint = 'https://gql.hashnode.com';
-  const apiKey = '2b8ef261-8746-4849-bce4-b1f06b53477a';
-
-  const graphQLClient = new GraphQLClient(endpoint, {
-    headers: {
-      authorization: `Bearer 2b8ef261-8746-4849-bce4-b1f06b53477a`,
-    },
-  })
-
-  const query = gql`
-  query GetUserDetails($username: String!) {
-    user(username: jyotishman421) {
+const query = gql`
+  query Me {
+    me {
       id
       username
       name
       bio {
-        # Include fields from the ContentFragment or other relevant fields
-        content
-        joinedAt
-        location
-        socialMedia {
-          twitter
-          github
-          linkedin
-        }
-        # Add more fields as needed
+      markdown
+      html
+      text
+    }
+      profilePicture
+      socialMediaLinks {
+        website
+        github
+        twitter
+        instagram
+        facebook
+        stackoverflow
+        linkedin
+        youtube
       }
+      badges {
+        id
+        name
+        description
+        image
+        dateAssigned
+        infoURL
+        suppressed
+      }
+    followersCount
+    followingsCount
+    tagline
+    dateJoined
+    location
+    availableFor
+    tagsFollowing {
+      id
+      name
+      slug
+      logo
+      tagline
+      followersCount
+      postsCount
+      
+    }
     }
   }
-`
-const data = await graphQLClient.request(query)
- 
-console.log(data)
-const userdata = data
+`;
 
- 
+async function fetchData() {
+  const endpoint = process.env.HASHNODE_URL;
+  const apiKey = process.env.HASHNODE_TOKEN;
+
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      authorization: `Bearer ${apiKey}`,
+    },
+  });
+
+  const data: UserData = await graphQLClient.request(query);
+  return data;
+}
+
+export default async function Home() {
+  const userData = await fetchData();
+  console.log(userData);
+
   return (
     <main>
-      <h1>{userdata?.me?.name}</h1>
-        <img src={userdata?.me?.profilePicture} alt="user" />
+      <h1 className="p-5 text-center font-medium">{userData.me.name}</h1>
+      <h2 className="p-5 text-center font-medium">{userData.me.username}</h2>
+      <h2 className="p-5 text-center font-medium">{userData.me.bio.markdown}</h2>
+      <p className="p-5 text-center font-medium">Github : {userData.me.socialMediaLinks.github}</p>
+      <p className="p-5 text-center font-medium">Website : {userData.me.socialMediaLinks.website}</p>
+      <p className="p-5 text-center font-medium">{userData.me.socialMediaLinks.twitter}</p>
+      <img src={userData.me.profilePicture} alt="user" />
+      <h3 className="p-5 text-center font-medium">{userData.me.followersCount}</h3>
+      <h3 className="p-5 text-center font-medium">{userData.me.followingsCount}</h3>
     </main>
   );
 }
