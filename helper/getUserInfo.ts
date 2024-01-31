@@ -11,6 +11,16 @@ export async function getUserInfo(): Promise<any> {
         bio {
           markdown
         }
+         socialMediaLinks {
+          website
+          github
+          twitter
+          instagram
+          facebook
+          stackoverflow
+          linkedin
+          youtube
+        }
       }
     }
   `;
