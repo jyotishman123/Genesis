@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
+// next.config.js
+
 const nextConfig = {
     images: {
-        domains: ['cdn.hashnode.com'],
+      remotePatterns: [
+        { hostname: 'cdn.hashnode.com', protocol: 'https' },
+        { hostname: 'img.freepik.com', protocol: 'https' },
+        // Add more patterns as needed
+      ],
     },
-}
-
-export default nextConfig;
+  };
+  
+  export default nextConfig;
+  

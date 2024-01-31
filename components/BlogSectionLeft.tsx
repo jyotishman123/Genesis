@@ -8,20 +8,20 @@ interface HeroSectionLeftProps {
   post: string;
 }
 
-const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post }) => {
+const BlogSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post }) => {
 
 
  
   
 
   return (
-     <div className='p-6'>
+     <div className=''>
              <div>
                    <Image src={post?.node?.coverImage?.url} alt='coverImage' height={300} width={500} priority className='w-full  sm:-h-[400px] xl-max-h-[600px]' />
              </div>
 
              <div className='my-3'>
-                   <h1 className='sm:text-3xl  text-lg font-semibold'>{post?.node?.title}</h1>          
+                   <h1 className='sm:text-3xl  text-lg font-semibold '>{post?.node?.title}</h1>          
              </div>
 
               <div className='sm:my-3 my-2 flex items-center'>
@@ -45,4 +45,4 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
   );
 }
 
-export default HeroSectionLeft;
+export default BlogSectionLeft;

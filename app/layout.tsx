@@ -24,7 +24,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        <div className="max-w-[90%] mx-auto my-6 py-6 px-6"> 
+        <div className="max-w-[90%] mx-auto my-6 py-6 px-[5%]"> 
         {children}
         </div>
       </body>
