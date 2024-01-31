@@ -37,7 +37,7 @@ const HeroSectionRight: FC<HeroSectionRightProps> = ({ username, profilePic, pos
                                    </div>
 
                                    <div>
-                                        <button className='uppercase py-2 px-4 border-2 border-black text-sm'>read more</button>
+                                        <button className='uppercase py-2 px-4 border-2 border-black rounded-md shadow-md text-sm'>read more</button>
                                    </div>
 
                               </div>
