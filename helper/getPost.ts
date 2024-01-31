@@ -4,7 +4,7 @@ import { gql, GraphQLClient } from "graphql-request";
 export async function getPost(): Promise<any> {
     const query = gql`
     query GetUserPosts  {
-        user(username: "jyotishman421") {
+        user(username: "Dev21") {
           id
           username
           name
