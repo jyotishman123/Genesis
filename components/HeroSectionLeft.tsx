@@ -5,7 +5,9 @@ import { Avatar } from '@mui/material';
 interface HeroSectionLeftProps {
   username: string;
   profilePic: string;
-  post: string;
+  // post: string;
+  // node: string;
+  post: { node: { coverImage: { url: string }; title: string; brief: string } }[];
 }
 
 const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post }) => {
@@ -15,7 +17,10 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
   
 
   return (
-     <div className='p-6'>
+ 
+
+     <div className='p-6 '>
+ 
              <div>
                    <Image src={post?.node?.coverImage?.url} alt='coverImage' height={300} width={500} priority className='w-full  sm:-h-[400px] xl-max-h-[600px]' />
              </div>
@@ -42,6 +47,7 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
               </div>
 
      </div>
+
   );
 }
 
