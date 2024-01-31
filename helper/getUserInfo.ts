@@ -8,6 +8,9 @@ export async function getUserInfo(): Promise<any> {
         username
         name
         profilePicture
+        bio {
+          markdown
+        }
       }
     }
   `;

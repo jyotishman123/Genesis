@@ -10,7 +10,11 @@ const Navbar = async () => {
     <div className="py-4 px-6 shadow-s">
       <div className="flex justify-around items-center px-6">
         <div>
-          <h1 className="text-2xl  uppercase">Genesis</h1>
+          <h1 className="text-2xl  p-4 uppercase rounded-xl shadow-lg font-semibold">
+            <Link href="/">
+              Genesis
+            </Link>
+          </h1>
         </div>
         <div>
           <ul>
@@ -30,7 +34,7 @@ const Navbar = async () => {
           <div className="mx-2">
             <h2 className="text-sm">{userDetails?.me?.name}</h2>
           </div>
-          <div className="mx-2">
+          <div className="mx-2 shadow-lg rounded-full">
             <Avatar
               alt={userDetails?.me?.name}
               src={userDetails?.me?.profilePicture}
