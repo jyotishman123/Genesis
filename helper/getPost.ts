@@ -2,7 +2,7 @@ import { gql, GraphQLClient } from "graphql-request";
 
 
 export async function getPost(): Promise<any> {
-    const query = gql`
+  const query = gql`
     query GetUserPosts  {
         user(username: "Dev21") {
           id
@@ -27,16 +27,15 @@ export async function getPost(): Promise<any> {
         }
       }
     `;
-  
-    const endpoint = process.env.HASHNODE_URL as string;
-    const apiKey = process.env.HASHNODE_TOKEN as string;
-  
-    const graphQLClient: GraphQLClient = new GraphQLClient(endpoint, {
-      headers: {
-        authorization: `Bearer ${apiKey}`,
-      },
-    });
-  
-    return graphQLClient.request(query);
-  }
-  
+
+  const endpoint = process.env.HASHNODE_URL as string;
+  const apiKey = process.env.HASHNODE_TOKEN as string;
+
+  const graphQLClient: GraphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      authorization: `Bearer ${apiKey}`,
+    },
+  });
+
+  return graphQLClient.request(query);
+}
