@@ -28,8 +28,8 @@ export async function getPost(): Promise<any> {
       }
     `;
   
-    const endpoint: string = process.env.HASHNODE_URL;
-    const apiKey: string = process.env.HASHNODE_TOKEN;
+    const endpoint = process.env.HASHNODE_URL as string;
+    const apiKey = process.env.HASHNODE_TOKEN as string;
   
     const graphQLClient: GraphQLClient = new GraphQLClient(endpoint, {
       headers: {
