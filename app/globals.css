@@ -16,6 +16,13 @@
   }
 }
 
+* {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+
 
 @font-face {
   font-family: 'Poppins';

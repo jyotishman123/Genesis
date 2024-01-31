@@ -6,8 +6,11 @@ export default  function Home() {
    
 
    return(
-      <h1>
+      <>
+      
         <HeroSection />
-       </h1>
+        <div>Hellow</div>
+      </>  
+        
    )
 }

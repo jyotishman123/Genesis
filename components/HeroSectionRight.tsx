@@ -9,19 +9,22 @@ interface HeroSectionRightProps {
 }
 
 const HeroSectionRight: FC<HeroSectionRightProps> = ({ username, profilePic, posts }) => {
-     console.log(posts[0].node)
-     return (
-          <div className='rounded-lg max-h-[1200px]'>
+
+     
+
+  return (
+    <div className='rounded-lg sm:max-h-screen overflow-y-scroll'>
 
                <div>
-                    {posts.map((element, index) => {
-                         return (
-                              <div key={index} className='my-6 w-[90%] mx-auto'>
-                                   <div>
-                                        <Image src={element?.node?.coverImage?.url} alt='coverImage' height={200} width={300} className='w-full mx-auto max-h-[200px] rounded-lg' priority />
-                                   </div>
+                    {posts.map((element,index)=>{
+                        return(
+                             <div key={index} className='my-6 w-[90%] mx-auto'>
+                                     <div>
+                                          <Image src={element?.node?.coverImage?.url} alt='coverImage' height={200} width={300} className='w-full mx-auto max-h-[200px] rounded-lg' priority />
+                                     </div>
 
-                                   <div className='my-3 px-1'>
+                                     <div className='my-3 px-1'>
+
                                         <h1 className='text-lg font-semibold'>{element.node.title}</h1>
                                    </div>
                                    <div className='px-1'>

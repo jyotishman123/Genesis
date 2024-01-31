@@ -16,8 +16,8 @@ const HeroSection: FC<HeroSectionProps> = async (): Promise<JSX.Element | void> 
   const [, ...newposts] = data?.user?.posts?.edges;
 
   return (
-    <div className='my-6 py-6 px-6'>
-      <div className='flex w-full gap-2'>
+    <div className='my-6 py-6 px-6  '>
+      <div className='flex flex-col sm:flex-row w-full gap-2'>
         <div className=' basis-2/3'>
           <HeroSectionLeft username={username} profilePic={profilePicture} post={posts} node={''} />
         </div>
