@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Avatar } from '@mui/material';
@@ -13,8 +15,6 @@ interface HeroSectionLeftProps {
 const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post }) => {
 
 
- 
-  
 
   return (
 
@@ -50,3 +50,5 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
 }
 
 export default HeroSectionLeft;
+
+

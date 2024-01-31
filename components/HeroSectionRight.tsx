@@ -1,3 +1,5 @@
+"use client"
+
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Avatar } from '@mui/material';
@@ -9,21 +11,17 @@ interface HeroSectionRightProps {
 }
 
 const HeroSectionRight: FC<HeroSectionRightProps> = ({ username, profilePic, posts }) => {
-
-     
-
-  return (
-    <div className='rounded-lg sm:max-h-screen overflow-y-scroll'>
-
+     return (
+          <div className='rounded-lg sm:max-h-screen overflow-y-scroll'>
                <div>
-                    {posts.map((element,index)=>{
-                        return(
-                             <div key={index} className='my-6 w-[90%] mx-auto'>
-                                     <div>
-                                          <Image src={element?.node?.coverImage?.url} alt='coverImage' height={200} width={300} className='w-full mx-auto max-h-[200px] rounded-lg' priority />
-                                     </div>
+                    {posts.map((element, index) => {
+                         return (
+                              <div key={index} className='my-6 w-[90%] mx-auto'>
+                                   <div>
+                                        <Image src={element?.node?.coverImage?.url} alt='coverImage' height={200} width={300} className='w-full mx-auto max-h-[200px] rounded-lg' priority />
+                                   </div>
 
-                                     <div className='my-3 px-1'>
+                                   <div className='my-3 px-1'>
 
                                         <h1 className='text-lg font-semibold'>{element.node.title}</h1>
                                    </div>
@@ -46,7 +44,6 @@ const HeroSectionRight: FC<HeroSectionRightProps> = ({ username, profilePic, pos
                          )
                     })}
                </div>
-
           </div>
      );
 }
