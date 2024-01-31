@@ -20,7 +20,7 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
 
      <div className='p-6 '>
              <div>
-                   <Image src={post?.node?.coverImage?.url} alt='coverImage' height={300} width={500} priority className='w-full  sm:-h-[400px] xl-max-h-[600px] rounded-md border' />
+                   <Image src={post?.node?.coverImage?.url} alt='coverImage' height={300} width={500} priority className='w-full  sm:-h-[400px] xl-max-h-[600px] rounded-md border shadow-xl' />
              </div>
 
              <div className='my-3'>
@@ -33,11 +33,11 @@ const HeroSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
               </div>
                
               <div className='my-6'>
-                  <p className='text-sm sm:text-lg'>{post?.node?.brief}</p>
+                  <p className='text-sm sm:text-lg class'>{post?.node?.brief}</p>
               </div>
 
               <div>
-                  <button className='uppercase py-2 px-4 border-2 text-sm border-black'>Read more</button>
+                  <button className='uppercase py-2 px-4 border-2 text-sm rounded-md shadow-md border-black'>Read more</button>
               </div>
 
               <div>
