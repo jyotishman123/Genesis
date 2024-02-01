@@ -1,7 +1,9 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import { getUserInfo } from "@/helper/getUserInfo";
+import Link from "next/link";
 
+// eslint-disable-next-line @next/next/no-async-client-component
 const Navbar = async () => {
   const userDetails = await getUserInfo();
 
@@ -11,13 +13,17 @@ const Navbar = async () => {
         <div>
           <h1 className="text-2xl  uppercase">Hashnode</h1>
         </div>
-
+ 
               
 
               <div>
                     <ul>
+                      <Link href='/Github'> 
                         <li className="inline  mx-3 cursor-pointer text-s">github</li>
+                       </Link>
+                        <Link href='/Blogs'> 
                         <li className="inline  mx-3 cursor-pointer text-s">blogs</li>
+                        </Link>
                     </ul>
               </div>
 
