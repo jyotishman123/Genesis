@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+ 
+import HeroSection from "@/components/HeroSection"
+import BlogSection from "@/components/BlogSection"
+export default  function Home() {
+=======
 import HeroSection from "@/components/HeroSection"
 import { getPost } from '@/helper/getPost';
 import { getUserInfo } from "@/helper/getUserInfo";
 import Image from "next/image";
 import Link from "next/link";
+>>>>>>> fa43ad289e5580b995c934bd3cdeda1764791ad4
 
 export default async function Home() {
    const userDetails = await getUserInfo();
@@ -13,6 +20,12 @@ export default async function Home() {
    const { username, profilePicture, name } = data.user;
    return (
       <>
+<<<<<<< HEAD
+         <HeroSection/>
+         <BlogSection/>
+      </>  
+        
+=======
          <div className="flex flex-col-2">
             <div className="p-5 text-2xl max-w-prose">
                Hi this is {userDetails?.me?.name}. <br></br>
@@ -44,5 +57,6 @@ export default async function Home() {
 
       </>
 
+>>>>>>> fa43ad289e5580b995c934bd3cdeda1764791ad4
    )
 }

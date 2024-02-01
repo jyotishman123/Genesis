@@ -27,6 +27,21 @@ export async function getPost(): Promise<any> {
         }
       }
     `;
+<<<<<<< HEAD
+  
+    const endpoint  = process.env.HASHNODE_URL as string;
+    const apiKey  = process.env.HASHNODE_TOKEN as string;
+  
+    const graphQLClient: GraphQLClient = new GraphQLClient(endpoint, {
+      headers: {
+        authorization: `Bearer ${apiKey}`,
+      },
+    });
+  
+    return graphQLClient.request(query);
+  }
+  
+=======
 
   const endpoint = process.env.HASHNODE_URL as string;
   const apiKey = process.env.HASHNODE_TOKEN as string;
@@ -39,3 +54,4 @@ export async function getPost(): Promise<any> {
 
   return graphQLClient.request(query);
 }
+>>>>>>> fa43ad289e5580b995c934bd3cdeda1764791ad4
