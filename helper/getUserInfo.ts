@@ -10,6 +10,19 @@ export async function getUserInfo(): Promise<any> {
         username
         name
         profilePicture
+        bio {
+          markdown
+        }
+         socialMediaLinks {
+          website
+          github
+          twitter
+          instagram
+          facebook
+          stackoverflow
+          linkedin
+          youtube
+        }
       }
     }
   `;

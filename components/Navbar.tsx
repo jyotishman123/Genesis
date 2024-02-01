@@ -10,26 +10,37 @@ const Navbar = async () => {
     <div className="py-4 px-6 shadow-s">
       <div className="flex justify-around items-center px-6">
         <div>
+<<<<<<< HEAD
           <Link href={'/'}> 
           <h1 className="text-2xl  uppercase">Hashnode</h1>
           </Link>
+=======
+          <h1 className="text-2xl  p-4 uppercase rounded-xl shadow-lg font-semibold">
+            <Link href="/">
+              Genesis
+            </Link>
+          </h1>
         </div>
-
-              
-
-              <div>
-                    <ul>
-                        <li className="inline  mx-3 cursor-pointer text-s">github</li>
-                        <li className="inline  mx-3 cursor-pointer text-s">blogs</li>
-                    </ul>
-              </div>
-
-
+        <div>
+          <ul>
+            <li className="inline  mx-3 cursor-pointer text-s">
+              <Link href="/Github">
+                Github
+              </Link>
+            </li>
+            <li className="inline  mx-3 cursor-pointer text-s">
+              <Link href="/Blogs">
+                Blogs
+              </Link>
+            </li>
+          </ul>
+>>>>>>> fa43ad289e5580b995c934bd3cdeda1764791ad4
+        </div>
         <div className="  flex items-center">
           <div className="mx-2">
             <h2 className="text-sm">{userDetails?.me?.name}</h2>
           </div>
-          <div className="mx-2">
+          <div className="mx-2 shadow-lg rounded-full">
             <Avatar
               alt={userDetails?.me?.name}
               src={userDetails?.me?.profilePicture}
