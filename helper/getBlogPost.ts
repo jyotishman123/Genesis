@@ -1,4 +1,4 @@
-'use client'
+ 
 
 import { request, gql } from 'graphql-request'
 

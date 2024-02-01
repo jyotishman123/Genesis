@@ -10,7 +10,7 @@ const BlogSection: FC<HeroSectionProps> = async (): Promise<JSX.Element | void> 
   if (!data) {
     return;
   }
-  const { username, profilePicture, name } = data.user;
+  const { username, profilePicture} = data.user;
 
   const posts = data?.user?.posts?.edges[0];
   const [, ...newposts] = data?.user?.posts?.edges;

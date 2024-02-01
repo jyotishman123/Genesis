@@ -6,6 +6,8 @@ const nextConfig = {
       remotePatterns: [
         { hostname: 'cdn.hashnode.com', protocol: 'https' },
         { hostname: 'img.freepik.com', protocol: 'https' },
+        { hostname: 'avatars.githubusercontent.com', protocol: 'https' },
+
         // Add more patterns as needed
       ],
     },
