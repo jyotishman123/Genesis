@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Avatar } from '@mui/material';
+import Link from 'next/link';
 
 interface HeroSectionLeftProps {
   username: string;
@@ -34,7 +35,9 @@ const BlogSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
               </div>
 
               <div>
+                <Link href={`/post/${post?.node?.id}`}> 
                   <button className='uppercase py-2 px-4 border-2 text-sm border-black'>Read more</button>
+                </Link>
               </div>
 
               <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import { getUserInfo } from "@/helper/getUserInfo";
+import Link from "next/link";
 
 const Navbar = async () => {
   const userDetails = await getUserInfo();
@@ -9,7 +10,9 @@ const Navbar = async () => {
     <div className="py-4 px-6 shadow-s">
       <div className="flex justify-around items-center px-6">
         <div>
+          <Link href={'/'}> 
           <h1 className="text-2xl  uppercase">Hashnode</h1>
+          </Link>
         </div>
 
               

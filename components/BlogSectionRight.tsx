@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Avatar } from '@mui/material';
+import Link from 'next/link';
 
 interface HeroSectionRightProps {
   username: string;
@@ -40,7 +41,10 @@ const image = 'https://img.freepik.com/free-vector/laptop-with-program-code-isom
                                      </div>
 
                                      <div>
+                 
+                                        <Link href={`/post/${element.node.id}`}>
                                         <button className='uppercase py-2 px-4 border-2 border-black text-sm'>read more</button>
+                                        </Link>
                                      </div>
 
                              </div>
