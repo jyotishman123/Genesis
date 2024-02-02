@@ -1,6 +1,7 @@
 import React from 'react'
 import { getGitubUserDetails } from '@/helper/getGithubApi'
 import Image from 'next/image'
+import GitHubCalendar from 'react-github-calendar';
 type Props = {}
 
 const page = async (props: Props) => {
@@ -32,7 +33,9 @@ const page = async (props: Props) => {
                                  <h1></h1>
                             </div>
                       </div>
-
+                      <div>
+                      <GitHubCalendar username="devkant21" colorScheme='light' />
+                      </div>
           </div>
 
 
