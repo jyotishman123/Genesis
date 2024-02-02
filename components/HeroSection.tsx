@@ -11,19 +11,19 @@ import PersonIcon from '@mui/icons-material/Person';
 export const HeroSection = async () => {
   const userData = await getAllUserInfo();
   return (
-    <div className="h-[80vh] flex items-center  my-6">
+    <div className="sm:h-[80vh] h-[100vh] min-h-[800px]  flex items-center my-6">
       <div className="w-[80%] mx-auto justify-start">
         <div className="text-center">
-          <h1 className="font-bold text-[60px] uppercase my-2">
+          <h1 className="font-bold sm:text-[60px] text-[35px] uppercase my-6 sm:my-2">
             {userData?.me?.name}
           </h1>
-          <p className="text-lg my-2">{userData?.me?.bio?.markdown}</p>
+          <p className="text-lg sm:my-2 my-6">{userData?.me?.bio?.markdown}</p>
  
         </div>
         <div>
-          <h2 className="text-center uppercase font-semibold">Follow me on</h2>
+          <h2 className="text-center uppercase my-4 sm:my-0 font-semibold">Follow me on</h2>
         </div>
-        <div className="my-[2%] flex flex-wrap gap-2 justify-center">
+        <div className="sm:my-[2%]  my-[8%] flex flex-wrap gap-2 justify-center">
           {Object.keys(userData?.me?.socialMediaLinks).map((ele, index) => {
             const socialMediaLink = userData?.me?.socialMediaLinks[ele];
 
@@ -47,20 +47,16 @@ export const HeroSection = async () => {
             );
           })}
         </div>
-        <div className=" flex justify-center my-[2%] py-3 px-3 gap-3">
-          <div className=" shadow-xl py-6 px-6 hover:border-2 border-black">
-                  <h3 className="uppercase font-semibold">Following on Hasnode</h3>
-                  <div className="my-2 flex justify-center items-center gap-2">
-                      <PersonIcon/><span className="text-xl font-bold">{userData?.me?.followingsCount}</span>
-                  </div>
-          </div>
-          <div className=" shadow-xl py-6 px-6  hover:border-2 border-black">
-          <h3 className="uppercase font-semibold">Followers on Hasnode</h3>
-                  <div className="my-2 flex justify-center items-center gap-2">
-                      <PersonIcon/><span className="text-xl font-bold">{userData?.me?.followersCount}</span>
-                  </div>
-          </div>
-           
+        <div className="  flex flex-col sm:flex-row justify-center my-[4%] py-3 px-3 gap-3">
+      
+              <div className="shadow-lg py-4 px-4 text-center hover:bg-black hover:text-white">
+                   <div><span className="text-lg font-bold uppercase">Followers on Hashnode: </span>  <span className="text-lg font-bold uppercase">{userData?.me?.followersCount}</span></div>
+              </div>
+
+              <div className="shadow-lg py-4 px-6 text-center hover:bg-black hover:text-white">
+                   <div><span className="text-lg font-bold uppercase">Followers on Hashnode: </span>  <span className="text-lg font-bold uppercase">{userData?.me?.followersCount}</span></div>
+              </div>
+
         </div>
       </div>
     </div>
