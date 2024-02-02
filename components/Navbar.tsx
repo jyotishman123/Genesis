@@ -13,7 +13,7 @@ const Navbar = async () => {
       <div className="flex sm:justify-around justify-between items-center px-6">
         <div>
           <Link href='/'> 
-          <h1 className="text-2xl  uppercase">Hashnode</h1>
+          <h1 className="text-2xl  uppercase">Genesis</h1>
           </Link>
         </div>
  
@@ -22,10 +22,10 @@ const Navbar = async () => {
               <div className="sm:block hidden">
                     <ul>
                       <Link href='/Github'> 
-                        <li className="inline  mx-3 cursor-pointer text-s">github</li>
+                        <li className="inline  mx-3 cursor-pointer text-s uppercase">github</li>
                        </Link>
                         <Link href='/Blogs'> 
-                        <li className="inline  mx-3 cursor-pointer text-s">blogs</li>
+                        <li className="inline  mx-3 cursor-pointer text-s uppercase">blogs</li>
                         </Link>
                         
                     </ul>

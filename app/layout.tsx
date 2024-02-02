@@ -12,8 +12,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Genesis : Profile Starter",
-  description: "A Profile Starter kit, fetches data from Hashnode API & Github API",
+  title: "Genesis : A developer's portfolio starter kit",
+  description: "A developer's portfolio starter kit",
 };
 
 export default async function RootLayout({
