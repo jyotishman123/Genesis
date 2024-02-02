@@ -10,7 +10,10 @@ interface BlogSectionLeftProps {
   profilePic: string;
   // post: string;
   // node: string;
-  post: { node: { coverImage: { url: string }; title: string; brief: string } }[];
+  // post: { node: { coverImage: { url: string }; title: string; brief: string } }[];
+  post: {
+    node: { id: string; coverImage: { url: string }; title: string; brief: string };
+  }[];
 }
 
 const BlogSectionLeft: FC<BlogSectionLeftProps> = ({ username, profilePic, post }) => {

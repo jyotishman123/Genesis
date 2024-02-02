@@ -60,7 +60,7 @@ const page = async (props: Props) => {
             <div className='py-2'>
              <h5 className='my-6 text-lg font-bold'>Contribution</h5>
              <div className='flex justify-center '> 
-            <GitHubCalendar username="devkant21" colorScheme='light' />
+            <GitHubCalendar username="jyotishman123" colorScheme='light' />
             </div>
 
             </div>

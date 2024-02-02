@@ -9,7 +9,7 @@ interface HeroSectionRightProps {
   username: string;
   profilePic: string;
   posts: {
-    node: { coverImage: { url: string }; title: string; brief: string };
+    node: { id: string; coverImage: { url: string }; title: string; brief: string };
   }[];
 }
 
