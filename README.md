@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GENESIS : Developer&apos;s Portfolio Starter Kit
 
-## Getting Started
+>**Genesis** as the name suggests "The origin or coming into being of something" is no-fuss way of developing the **Portfolio** website using the API&apos;s sourced from [Hashnode](https://hashnode.com/settings/developer) and [Github](https://api.github.com/).
 
-First, run the development server:
+> Create your developer&apos;s Portfolio Starter Kit in minutes using the pre-built website.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> Just connect the API&apos;s & PAT [Personal Access Token] and get started.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## To replicate and spin up the repository in your system, do the following steps =>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ 1. Clone the repository
+    >git clone git@github.com:jyotishman123/Hashnode-.git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ 2. Install the dependencies
+    > npm install
+ 3. Run the server
+    > npm run dev
 
-## Learn More
+### To populate the user&apos;s data in the web applications, follow the steps below =>
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a **.env** file in the root of the repository.
+2. Add the HASHNODE_TOKEN from [Hashnode](https://hashnode.com/settings/developer)
+   >HASHNODE_TOKEN=************************
+3. Add the HASHNODE_URL
+   >HASHNODE_URL=https://gql.hashnode.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
