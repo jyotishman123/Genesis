@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Avatar } from '@mui/material';
 import Link from 'next/link';
 
-interface HeroSectionLeftProps {
+interface BlogSectionLeftProps {
   username: string;
   profilePic: string;
   // post: string;
@@ -13,7 +13,7 @@ interface HeroSectionLeftProps {
   post: { node: { coverImage: { url: string }; title: string; brief: string } }[];
 }
 
-const BlogSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post }) => {
+const BlogSectionLeft: FC<BlogSectionLeftProps> = ({ username, profilePic, post }) => {
 
 
 
