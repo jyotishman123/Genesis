@@ -9,7 +9,7 @@ const Navbar = async () => {
   const userDetails = await getUserInfo();
 
   return (
-    <div className="py-4 px-6 min-h-[70px] shadow-s fixed w-full top-0 bg-white">
+    <div className="py-4 z-50 px-6 min-h-[70px] shadow-s fixed w-full top-0 bg-white">
       <div className="flex sm:justify-around justify-between items-center px-6">
         <div>
           <Link href='/'> 
