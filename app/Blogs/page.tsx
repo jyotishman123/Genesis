@@ -26,7 +26,7 @@ const page = async (props: Props) => {
 
                     <div>
                            <div className='grid grid-cols-1 sm:grid-cols-2 my-6 py-6  lg:grid-cols-3 xl:grid-cols-4 gap-3'>
-                              {allPost?.map((posts,index)=>{
+                              {allPost?.map((posts: any,index: any)=>{
                                  return(
                                   <div key={index}> 
                                       <BlogCard posts={posts}/>
