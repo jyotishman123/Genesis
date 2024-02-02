@@ -1,18 +1,30 @@
-"use client";
+'use client'
 
 import React, { FC } from "react";
 import { Avatar } from "@mui/material";
 import Image from "next/image";
 
-// interface SinglePostProps {
-//   post: Object;
-// }
+interface SinglePostProps {
+  post: {
+    author: {
+      username: string;
+      name: string;
+      profilePicture: string;
+    };
+    coverImage: {
+      url: string;
+    };
+    title: string;
+    content: {
+      html: string;
+    };
+  };
+}
 
 const SinglePost: FC<SinglePostProps> = ({ post }) => {
   const image =
     "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?";
 
-   
   return (
     <div className="my-6 px-6 py-6">
       <div className="flex justify-end gap-2 items-center">

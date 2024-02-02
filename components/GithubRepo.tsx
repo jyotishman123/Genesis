@@ -14,7 +14,7 @@ const GithubRepo = () => {
  
   const [selectedNav, setSelectedNav] = useState<string>('Repositories');
 
-  function setNavigation(navItem){
+  function setNavigation(navItem: string){
        setSelectedNav((prev) => prev = navItem)
   }
 
