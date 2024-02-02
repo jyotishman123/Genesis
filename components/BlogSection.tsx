@@ -21,7 +21,7 @@ const BlogSection: FC<HeroSectionProps> = async (): Promise<JSX.Element | void> 
         <div className=' basis-2/3'>
           <BlogSectionLeft username={username} profilePic={profilePicture} post={posts} />
         </div>
-        <div className='  basis-1/3'>
+        <div className=' my-6 lg:my-0  basis-1/3'>
           <BlogSectionRight username={username} profilePic={profilePicture} posts={newposts} />
         </div>
       </div>

@@ -23,6 +23,7 @@ const BlogSectionRight: FC<HeroSectionRightProps> = ({
 
   return (
     <div className="rounded-lg lg:max-h-screen overflow-y-scroll">
+      <span className='my-2 uppercase text-md font-semibold'>latest post</span>
       <div>
         {posts.map((element, index) => {
           return (

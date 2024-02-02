@@ -1,33 +1,32 @@
 "use client";
 
 import React, { useState, useEffect, use } from "react";
-import { getUserFollowers } from "@/helper/getGithubApi";
+import { getUsersFollowing } from "@/helper/getGithubApi";
 import { Avatar } from "@mui/material";
 import Link from "next/link";
 
-const Followers = () => {
-  const [followers, setFollowers] = useState(null);
+const Following = () => {
+  const [following, setFollowing] = useState(null);
 
   useEffect(() => {
-    async function getMyFollowers() {
+    async function getMyFollowings() {
       try {
-        const followers = await getUserFollowers();
+        const followers = await getUsersFollowing();
         const jsonData = await followers.json();
-        setFollowers(jsonData);
+        setFollowing(jsonData);
       } catch (error) {
         console.log(error);
-        setFollowers(null);
+        setFollowing(null);
       }
     }
-    getMyFollowers();
+    getMyFollowings();
   }, []);
 
    
-
-  if (!followers) {
+  if (!following) {
     return (
       <div className="flex justify-center py-6 items-center">
-        <h1 className="my-6 text-3xl font-bold">Loading your Followers....</h1>
+        <h1 className="my-6 text-3xl font-bold">Loading your Followings....</h1>
       </div>
     );
   }
@@ -35,11 +34,11 @@ const Followers = () => {
   return (
     <div className="py-3 px-3">
       <div>
-        <h2 className="text-lg font-semibold">My Followers</h2>
+        <h2 className="text-lg font-semibold">My Following</h2>
       </div>
 
       <div className="grid xl:grid-cols-2  max-h-[500px] overflow-y-scroll   gap-4 my-6">
-        {followers.map((element, index) => {
+        {following.map((element, index) => {
           return (
             <Link href={element?.html_url} key={index}> 
             <div
@@ -63,7 +62,7 @@ const Followers = () => {
           );
           
         })}
-        <Link href={'https://github.com/Devkant21?tab=followers'}> 
+         <Link href={'https://github.com/Devkant21?tab=following'}> 
          <p className='text-md font-semibold text-blue-500'>show more...</p>
          </Link>
       </div>
@@ -71,4 +70,4 @@ const Followers = () => {
   );
 };
 
-export default Followers;
+export default Following;

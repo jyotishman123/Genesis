@@ -1,7 +1,7 @@
 'use client'
 
 import React,{useEffect, useState} from 'react'
-import { getUserGithubRepo } from '@/helper/getGithubRepo'
+import { getUserGithubRepo } from '@/helper/getGithubApi'
 import Link from 'next/link'
 import BookIcon from '@mui/icons-material/Book';
 
@@ -22,6 +22,7 @@ const Repositories = () => {
           }
        }
        getRepo()
+       
    },[])
 
    if(!repo){
@@ -32,7 +33,7 @@ const Repositories = () => {
       )
    }
 
-console.log(repo)
+ 
   return (
       <div className='py-3 px-3'>
         <div> 
