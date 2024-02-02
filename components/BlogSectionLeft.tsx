@@ -18,9 +18,9 @@ const BlogSectionLeft: FC<HeroSectionLeftProps> = ({ username, profilePic, post 
 
 
   return (
-     <div className=''>
- 
-             <div>
+     <div>
+          <span className='my-2 uppercase text-md font-semibold'>Featured post</span>
+             <div className='my-2'>
                    <Image src={post?.node?.coverImage?.url} alt='coverImage' height={300} width={500} priority className='w-full  sm:-h-[400px] xl-max-h-[600px] rounded-md border shadow-xl' />
              </div>
 

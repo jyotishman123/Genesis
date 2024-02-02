@@ -25,16 +25,16 @@ const page = async (props: Props) => {
                   <h1 className='font-bold text-3xl'>Github</h1>
              </div>
 
-          <div className='my-6 py-3  justify-center flex flex-col md:flex-row items-center gap-1 p-2'>
+          <div className='my-6 py-3  justify-center flex flex-col lg:flex-row items-center gap-1 p-2'>
                    
                        
-                   <div className='py-6 px-6 w-2/2 my-3'>
+                   <div className='py-6 px-6 lg:-2/5 my-3 w-2/2'>
                              <div className='my-3'>
                                <Image src={jsonData?.avatar_url} className='rounded-full' alt='github_avatar' height={300} width={300} priority />
                              </div>
                              <div className='my-2'>
-                                <h1 className='text-xl ny-1 font-bold'>{jsonData?.name}</h1>
-                                <h2 className='text-lg ny-1 text-slate-700'>@{jsonData?.login}</h2>
+                                <h1 className='text-xl my-1 font-bold'>{jsonData?.name}</h1>
+                                <h2 className='text-lg my-1 text-slate-700'>@{jsonData?.login}</h2>
                                 <h3 className='my-2'>{jsonData?.bio}</h3>
                              </div>
                              <div className='flex my-2'>
@@ -47,7 +47,7 @@ const page = async (props: Props) => {
 
                         
 
-                   <div className='w-2/2'>
+                   <div className='lg:w-3/5 w-2/2'>
 
                            <GithubRepo /> 
                            
