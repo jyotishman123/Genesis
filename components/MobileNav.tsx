@@ -24,7 +24,7 @@ const MobileNav: FC<MobileNavProps> = ({ user }) => {
         {showNav ? <CloseIcon /> : <MenuIcon />}
       </div>
       {showNav && (
-        <div className='fixed right-0 w-[40vw] shadow-xl py-6 px-6'>
+        <div className='fixed bg-white z-50 right-0 w-[40vw] shadow-xl py-6 px-6'>
           <div className='flex justify-end items-center flex-col'>
             <ul className='text-end'>
               <Link href='/Github'>

@@ -13,8 +13,7 @@ const page = async (props: Props) => {
 
  const githubData = await getGitubUserDetails();
  const jsonData = await githubData.json()
-
- console.log(jsonData)
+ 
  if(!jsonData?.id){
       return
  }

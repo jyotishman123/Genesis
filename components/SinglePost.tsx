@@ -12,7 +12,7 @@ const SinglePost: FC<SinglePostProps> = ({ post }) => {
   const image =
     "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?";
 
-  console.log(post);
+   
   return (
     <div className="my-6 px-6 py-6">
       <div className="flex justify-end gap-2 items-center">
