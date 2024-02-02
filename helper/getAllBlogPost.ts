@@ -4,7 +4,7 @@ import { gql, GraphQLClient } from "graphql-request";
 export async function getAllBlogPost(): Promise<any> {
   const query = gql`
   query Publication {
-    publication(host: "blog.kylerobins.com"){
+    publication(host: "webcentric.hashnode.dev"){
       isTeam,
       title,
       posts(first:20) {

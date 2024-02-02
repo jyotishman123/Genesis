@@ -28,10 +28,10 @@ const MobileNav: FC<MobileNavProps> = ({ user }) => {
           <div className='flex justify-end items-center flex-col'>
             <ul className='text-end'>
               <Link href='/Github'>
-                <li className='my-2 text-xl'>Github</li>
+                <li className='my-2 text-xl uppercase'>Github</li>
               </Link>
               <Link href='/Blogs'>
-                <li className='my-2 text-xl'>Blog</li>
+                <li className='my-2 text-xl uppercase'>Blog</li>
               </Link>
               <li className='my-6 flex'>
                 <span className='mx-2'>{user?.me?.name}</span>
