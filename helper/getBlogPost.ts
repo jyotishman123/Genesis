@@ -19,7 +19,8 @@ export const getBlogPost = async (id:string) =>{
           url
         }
         content{
-          html
+           markdown
+           html
         }
        
       }
