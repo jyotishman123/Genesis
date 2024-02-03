@@ -1,11 +1,11 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { getPost } from '@/helper/getPost';
 import BlogSectionLeft from './BlogSectionLeft';
 import BlogSectionRight from './BlogSectionRight';
 
 interface HeroSectionProps {}
 
-const BlogSection: FC<HeroSectionProps> = async (): Promise<JSX.Element | void> => {
+const BlogSection = async () => {
   const data = await getPost();
   if (!data) {
     return;
