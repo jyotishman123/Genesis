@@ -11,13 +11,16 @@ interface BlogSectionLeftProps {
   // post: string;
   // node: string;
   // post: { node: { coverImage: { url: string }; title: string; brief: string } }[];
-  post: {
+   post: {
     node: { id: string; coverImage: { url: string }; title: string; brief: string };
-  }[];
+  };
+  
 }
 
-const BlogSectionLeft: FC<BlogSectionLeftProps> = ({ username, profilePic, post }) => {
 
+
+const BlogSectionLeft: FC<BlogSectionLeftProps> = ({ username, profilePic, post }) => {
+ 
 
 
   return (

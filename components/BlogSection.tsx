@@ -15,6 +15,8 @@ const BlogSection = async () => {
   const posts = data?.user?.posts?.edges[0];
   const [, ...newposts] = data?.user?.posts?.edges;
 
+  
+
   return (
     <div className='my-[5%]'>
       <div className='flex flex-col lg:flex-row w-full gap-2'>

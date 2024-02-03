@@ -20,7 +20,7 @@ const BlogSectionRight: FC<HeroSectionRightProps> = ({
 }) => {
   const image =
     "https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?";
-
+ 
   return (
     <div className="rounded-lg lg:max-h-screen overflow-y-scroll">
       <span className='my-2 uppercase text-md font-semibold'>latest post</span>
